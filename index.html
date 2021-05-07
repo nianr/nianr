@@ -131,7 +131,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/cFrost0/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -181,6 +181,97 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert-zh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/cFrost0/uploads/blue.jpg">
+      <meta itemprop="name" content="Evan Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cFrost">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/cFrost0/2021/05/07/FastBert-zh/" class="post-title-link" itemprop="url">FastBert论文解读</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-07 15:05:41 / Modified: 07:56:28" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">English Version</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
+<li>adaptive inference time</li>
+<li>unique self-distillation mechanism at fine-tuning</li>
+<li>speed up by 1 to 12 times than BERT</li>
+</ul>
+<hr>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>FB一共有两个机制</li>
+</ul>
+<ol>
+<li>sample-wise adaptive mechanism –&gt; Adaptive inference</li>
+<li>unique self-distillation process –&gt; Knowledge distillation</li>
+</ol>
+<ul>
+<li>下图是FB的整体结构：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
+<li>可以看到，FB共分为两大部分，Backbone和Branch。</li>
+<li>Backbone由12层Transformer组成，基本就是BERT的结构，Branch则是从不同层中蒸馏出来的student model。</li>
+</ul>
+<hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/cFrost0/2021/05/07/FastBert-zh/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -194,7 +285,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/cFrost0/2021/05/07/FastBert/" class="post-title-link" itemprop="url">FastBert</a>
+          <a href="/cFrost0/2021/05/07/FastBert/" class="post-title-link" itemprop="url">FastBert -- An improvement for BERT</a>
         </h2>
 
         <div class="post-meta-container">
@@ -212,7 +303,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-07 03:51:46" itemprop="dateModified" datetime="2021-05-07T03:51:46Z">2021-05-07</time>
+        <time title="Modified: 2021-05-07 07:58:06" itemprop="dateModified" datetime="2021-05-07T07:58:06Z">2021-05-07</time>
       </span>
 
   
@@ -225,23 +316,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
+          <p><a href="">中文版</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1904.00962">Original paper</a></li>
 <li>adaptive inference time</li>
 <li>unique self-distillation mechanism at fine-tuning</li>
 <li>speed up by 1 to 12 times than BERT</li>
 </ul>
 <hr>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
-<li>FB一共有两个机制</li>
+<li>FastBert has two mechanisms:</li>
 </ul>
 <ol>
 <li>sample-wise adaptive mechanism –&gt; Adaptive inference</li>
 <li>unique self-distillation process –&gt; Knowledge distillation</li>
 </ol>
 <ul>
-<li>下图是FB的整体结构：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
-<li>可以看到，FB共分为两大部分，Backbone和Branch。</li>
-<li>Backbone由12层Transformer组成，基本就是BERT的结构，Branch则是从不同层中蒸馏出来的student model。</li>
+<li>This picture shows the framework of FastBert：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
+<li>According to it, FastBert has two parts, one is Backbone another one is Branch. </li>
+<li>Backbone contains 12 layers of transformers, similar to the stucture of BERT. As to Branch, it distillings the student model from different layers. </li>
 </ul>
 <hr>
           <!--noindex-->

@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;cfrost0.github.io&quot;,&quot;root&quot;:&quot;&#x2F;cFrost0&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;cFrost0&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="中文版 Abstract Original paper adaptive inference time unique self-distillation mechanism at fine-tuning speed up by 1 to 12 times than BERT   Summary FastBert has two mechanisms:   sample-wise adaptive">
+<meta name="description" content="English Version Abstract adaptive inference time unique self-distillation mechanism at fine-tuning speed up by 1 to 12 times than BERT   Summary FB一共有两个机制   sample-wise adaptive mechanism –&gt; Adapti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FastBert -- An improvement for BERT">
-<meta property="og:url" content="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/index.html">
+<meta property="og:title" content="FastBert论文解读">
+<meta property="og:url" content="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert-zh/index.html">
 <meta property="og:site_name" content="cFrost">
-<meta property="og:description" content="中文版 Abstract Original paper adaptive inference time unique self-distillation mechanism at fine-tuning speed up by 1 to 12 times than BERT   Summary FastBert has two mechanisms:   sample-wise adaptive">
+<meta property="og:description" content="English Version Abstract adaptive inference time unique self-distillation mechanism at fine-tuning speed up by 1 to 12 times than BERT   Summary FB一共有两个机制   sample-wise adaptive mechanism –&gt; Adapti">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://i2.tiimg.com/737213/43011fa8c3ff496d.png">
 <meta property="og:image" content="http://i2.tiimg.com/737213/03c70448624600b7.png">
@@ -34,21 +34,21 @@
 <meta property="og:image" content="http://i2.tiimg.com/737213/0182af044794ef3c.png">
 <meta property="og:image" content="http://i2.tiimg.com/737213/8ba627d5a18d42be.png">
 <meta property="og:image" content="http://i2.tiimg.com/737213/93962cf227a452f7.png">
-<meta property="article:published_time" content="2021-05-06T18:34:13.000Z">
-<meta property="article:modified_time" content="2021-05-07T07:58:06.950Z">
+<meta property="article:published_time" content="2021-05-07T15:05:41.000Z">
+<meta property="article:modified_time" content="2021-05-07T07:56:28.581Z">
 <meta property="article:author" content="Evan Chen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://i2.tiimg.com/737213/43011fa8c3ff496d.png">
 
 
-<link rel="canonical" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">
+<link rel="canonical" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert-zh/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;cfrost0.github.io&#x2F;cFrost0&#x2F;2021&#x2F;05&#x2F;07&#x2F;FastBert&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;07&#x2F;FastBert&#x2F;&quot;,&quot;title&quot;:&quot;FastBert -- An improvement for BERT&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;cfrost0.github.io&#x2F;cFrost0&#x2F;2021&#x2F;05&#x2F;07&#x2F;FastBert-zh&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;07&#x2F;FastBert-zh&#x2F;&quot;,&quot;title&quot;:&quot;FastBert论文解读&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>FastBert -- An improvement for BERT | cFrost</title><script src="/cFrost0/js/config.js"></script>
+<title>FastBert论文解读 | cFrost</title><script src="/cFrost0/js/config.js"></script>
   
 
 
@@ -195,7 +195,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">
+    <link itemprop="mainEntityOfPage" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert-zh/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/cFrost0/uploads/blue.jpg">
@@ -208,7 +208,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          FastBert -- An improvement for BERT
+          FastBert论文解读
         </h1>
 
         <div class="post-meta-container">
@@ -218,16 +218,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-05-06 18:34:13" itemprop="dateCreated datePublished" datetime="2021-05-06T18:34:13Z">2021-05-06</time>
+      <time title="Created: 2021-05-07 15:05:41 / Modified: 07:56:28" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-07 07:58:06" itemprop="dateModified" datetime="2021-05-07T07:58:06Z">2021-05-07</time>
-      </span>
 
   
 </div>
@@ -239,65 +233,64 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><a href="">中文版</a></p>
+        <p><a href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">English Version</a></p>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1904.00962">Original paper</a></li>
 <li>adaptive inference time</li>
 <li>unique self-distillation mechanism at fine-tuning</li>
 <li>speed up by 1 to 12 times than BERT</li>
 </ul>
 <hr>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
-<li>FastBert has two mechanisms:</li>
+<li>FB一共有两个机制</li>
 </ul>
 <ol>
 <li>sample-wise adaptive mechanism –&gt; Adaptive inference</li>
 <li>unique self-distillation process –&gt; Knowledge distillation</li>
 </ol>
 <ul>
-<li>This picture shows the framework of FastBert：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
-<li>According to it, FastBert has two parts, one is Backbone another one is Branch. </li>
-<li>Backbone contains 12 layers of transformers, similar to the stucture of BERT. As to Branch, it distillings the student model from different layers. </li>
+<li>下图是FB的整体结构：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
+<li>可以看到，FB共分为两大部分，Backbone和Branch。</li>
+<li>Backbone由12层Transformer组成，基本就是BERT的结构，Branch则是从不同层中蒸馏出来的student model。</li>
 </ul>
 <hr>
 <span id="more"></span>
 <h3 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h3><ul>
-<li>All the embedding layers inside the 12 transformers are the same as BERT. </li>
-<li>The different from BERT is that it has an additional Teacher-Classifer, the structure is as follows:<br><img src="http://i2.tiimg.com/737213/03c70448624600b7.png" alt="backbone"></li>
-<li>Transformer outputs 768-dims features. They are compressed to 128-dims by a full connected layer firstly, then though self-attention layer witch doesn’t change the dimension. And then they though the second full connected layer, compressed to N-dim, where N is the the number of classification categories. Finally we get the probability pt of each category by applying sofmax.</li>
+<li>主干网络共包含12层Transformer，所有的Embedding、Transfomer都和Bert完全一样。</li>
+<li>与Bert不同的是，它多了一个Teacher-Classifer，结构如下所示：<br><img src="http://i2.tiimg.com/737213/03c70448624600b7.png" alt="backbone"></li>
+<li>Transformer输出768dim，先通过一个全连接层压缩到128dim，再通过self-attention，self-attention不改变维度，而后通过第二个全连接层，压缩到N-dim，N为分类类别数，最后通过sofmax得到每个类别的概率pt。</li>
 </ul>
 <hr>
 <h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><ul>
-<li>Branch contains L-2 Student-Classifer，which are distilled from different layer of transformers. </li>
-<li>The structure of Student-Classifer is the same as Teacher-Classifer。</li>
+<li>Branch包含有L-2个Student-Classifer，他们是从不同层Transformer中蒸馏出来的模型。</li>
+<li>Student-Classifer的结构与Teacher-Classifer的结构相同。</li>
 </ul>
 <hr>
 <h3 id="Pre-training-and-Fine-tune"><a href="#Pre-training-and-Fine-tune" class="headerlink" title="Pre-training and Fine-tune"></a>Pre-training and Fine-tune</h3><ul>
-<li>Two steps for training a FastBert model:</li>
+<li>FB模型的训练共分为2步：</li>
 </ul>
 <ol>
 <li>pre-train Backbone<ul>
-<li>In this step, the parameters in Teacher-Classifer are unchanged, so the pre-training process is exactly the same as that of BERT.  </li>
-<li>As a result, we can directly use the parameters of the Bert model. </li>
+<li>在这一步中，Teacher-Classifer的权重是不变的，所以预训练过程也和Bert完全一致。</li>
+<li>可以直接拿Bert模型的参数来用</li>
 </ul>
 </li>
 <li>fine-tune Backbone<ul>
-<li>This step aims to train Teacher-Classifer, and downstream tasks need to be determined before training.</li>
-<li>In this step, Student-Classifer is unchanged. </li>
+<li>这一步主要是为了训练Teacher-Classifer，训练之前需要确定下游任务。</li>
+<li>在这个过程中，Student-Classifer是不变的。</li>
 </ul>
 </li>
 <li>fine-tune Branch<ul>
-<li>This step is to train Student-Classifer by using the result of Teacher-Classifer. The author defines the following loss function:<br><img src="http://i2.tiimg.com/737213/c34cfc32265b4192.png" alt="Dkl"><br><img src="http://i2.tiimg.com/737213/af18721d781cc41c.png" alt="Loss"></li>
-<li>KL divergence is relative entropy, and the total loss function is the sum of the KL divergence between Teacher and Student. (ps: I don’t know the name of “KL divergence” clearly, so please check it further if you want to use it in a formal article. )</li>
-<li>Label is not used in this step of training, so we can use unsupervised training Student-Classifer。</li>
+<li>这一步是拿Teacher-Classifer的结果来训练Student-Classifer，作者定义了如下的损失函数：<br><img src="http://i2.tiimg.com/737213/c34cfc32265b4192.png" alt="Dkl"><br><img src="http://i2.tiimg.com/737213/af18721d781cc41c.png" alt="Loss"></li>
+<li>KL散度就是相对熵，总的损失函数是对Teacher和Student之间的KL散度求和。</li>
+<li>在这一步的训练中没有使用Label，所以可以用无监督训练Student。</li>
 </ul>
 </li>
 </ol>
 <hr>
 <h3 id="Adaptive-inference"><a href="#Adaptive-inference" class="headerlink" title="Adaptive inference"></a>Adaptive inference</h3><ul>
-<li>Adaptive inference in FastBert is “sample-wise”, which means that for each sample, the model will adaptively choose which Student-Classifer to use. For this reason, the author has made the following definition:<br><img src="http://i2.tiimg.com/737213/0182af044794ef3c.png" alt="uncertainty"></li>
-<li>After each layer of transformer, the uncertainty of each categroy is computed. The above formula is actually information entropy. </li>
-<li>Then the author made an assumption that the lower the uncertainty, the higher the accuracy of the model. So he set a threshold speed for the uncertainty, and those that exceed this threshold are passed to the next layer of transformer, others are classified by the current Student-Classifer.<br><img src="http://i2.tiimg.com/737213/8ba627d5a18d42be.png" alt="def"></li>
+<li>FB中的adaptive inference是“sample-wise”的，指的是对每一个样本，模型会自适应地选择使用到哪个Student-Classifer，为此，作者做出了如下的定义：<br><img src="http://i2.tiimg.com/737213/0182af044794ef3c.png" alt="uncertainty"></li>
+<li>在每一层Transformer之后，计算该分类输出的不确定性，上式其实就是信息熵。</li>
+<li>然后作者做了一个假设，不确定性越低，模型的准确率就越高，于是他为不确定性设置了一个阈值Speed，超过这个阈值的被传入下一层Transformer，低于这个阈值的直接使用当前的Student-Classifer做分类。<br><img src="http://i2.tiimg.com/737213/8ba627d5a18d42be.png" alt="def"></li>
 </ul>
 <hr>
 <h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><img src="http://i2.tiimg.com/737213/93962cf227a452f7.png" alt="result"></p>
@@ -314,14 +307,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/cFrost0/2021/05/05/hello-world/" rel="prev" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
+                <a href="/cFrost0/2021/05/07/FastBert/" rel="prev" title="FastBert -- An improvement for BERT">
+                  <i class="fa fa-chevron-left"></i> FastBert -- An improvement for BERT
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/cFrost0/2021/05/07/FastBert-zh/" rel="next" title="FastBert论文解读">
-                  FastBert论文解读 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
