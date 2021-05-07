@@ -212,7 +212,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-07 03:49:07" itemprop="dateModified" datetime="2021-05-07T03:49:07Z">2021-05-07</time>
+        <time title="Modified: 2021-05-07 03:51:46" itemprop="dateModified" datetime="2021-05-07T03:51:46Z">2021-05-07</time>
       </span>
 
   
@@ -244,49 +244,14 @@
 <li>Backbone由12层Transformer组成，基本就是BERT的结构，Branch则是从不同层中蒸馏出来的student model。</li>
 </ul>
 <hr>
-<h3 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h3><ul>
-<li>主干网络共包含12层Transformer，所有的Embedding、Transfomer都和Bert完全一样。</li>
-<li>与Bert不同的是，它多了一个Teacher-Classifer，结构如下所示：<br><img src="http://i2.tiimg.com/737213/03c70448624600b7.png" alt="backbone"></li>
-<li>Transformer输出768dim，先通过一个全连接层压缩到128dim，再通过self-attention，self-attention不改变维度，而后通过第二个全连接层，压缩到N-dim，N为分类类别数，最后通过sofmax得到每个类别的概率pt。</li>
-</ul>
-<hr>
-<h3 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h3><ul>
-<li>Branch包含有L-2个Student-Classifer，他们是从不同层Transformer中蒸馏出来的模型。</li>
-<li>Student-Classifer的结构与Teacher-Classifer的结构相同。</li>
-</ul>
-<hr>
-<h3 id="Pre-training-and-Fine-tune"><a href="#Pre-training-and-Fine-tune" class="headerlink" title="Pre-training and Fine-tune"></a>Pre-training and Fine-tune</h3><ul>
-<li>FB模型的训练共分为2步：</li>
-</ul>
-<ol>
-<li>pre-train Backbone<ul>
-<li>在这一步中，Teacher-Classifer的权重是不变的，所以预训练过程也和Bert完全一致。</li>
-<li>可以直接拿Bert模型的参数来用</li>
-</ul>
-</li>
-<li>fine-tune Backbone<ul>
-<li>这一步主要是为了训练Teacher-Classifer，训练之前需要确定下游任务。</li>
-<li>在这个过程中，Student-Classifer是不变的。</li>
-</ul>
-</li>
-<li>fine-tune Branch<ul>
-<li>这一步是拿Teacher-Classifer的结果来训练Student-Classifer，作者定义了如下的损失函数：<br><img src="http://i2.tiimg.com/737213/c34cfc32265b4192.png" alt="Dkl"><br><img src="http://i2.tiimg.com/737213/af18721d781cc41c.png" alt="Loss"><ul>
-<li>KL散度就是相对熵，总的损失函数是对Teacher和Student之间的KL散度求和。</li>
-<li>在这一步的训练中没有使用Label，所以可以用无监督训练Student。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="Adaptive-inference"><a href="#Adaptive-inference" class="headerlink" title="Adaptive inference"></a>Adaptive inference</h3><ul>
-<li>FB中的adaptive inference是“sample-wise”的，指的是对每一个样本，模型会自适应地选择使用到哪个Student-Classifer，为此，作者做出了如下的定义：<br><img src="http://i2.tiimg.com/737213/0182af044794ef3c.png" alt="uncertainty"></li>
-<li>在每一层Transformer之后，计算该分类输出的不确定性，上式其实就是信息熵。</li>
-<li>然后作者做了一个假设，不确定性越低，模型的准确率就越高，于是他为不确定性设置了一个阈值Speed，超过这个阈值的被传入下一层Transformer，低于这个阈值的直接使用当前的Student-Classifer做分类。<br><img src="http://i2.tiimg.com/737213/8ba627d5a18d42be.png" alt="def"></li>
-</ul>
-<hr>
-<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><img src="http://i2.tiimg.com/737213/93962cf227a452f7.png" alt="result"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/cFrost0/2021/05/07/FastBert/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
