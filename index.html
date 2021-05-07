@@ -206,7 +206,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-07 15:05:41 / Modified: 07:56:28" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
+      <time title="Created: 2021-05-07 15:05:41 / Modified: 08:06:30" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
     </span>
 
   
@@ -221,24 +221,17 @@
     <div class="post-body" itemprop="articleBody">
           <p><a href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">English Version</a></p>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
-<li>adaptive inference time</li>
-<li>unique self-distillation mechanism at fine-tuning</li>
-<li>speed up by 1 to 12 times than BERT</li>
+<li>自适应的推理时间</li>
+<li>在fine-tune阶段独特的自蒸馏（self-distillation）机制</li>
+<li>比BERT快1-12倍</li>
 </ul>
 <hr>
 <h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
 <li>FB一共有两个机制</li>
 </ul>
 <ol>
-<li>sample-wise adaptive mechanism –&gt; Adaptive inference</li>
-<li>unique self-distillation process –&gt; Knowledge distillation</li>
-</ol>
-<ul>
-<li>下图是FB的整体结构：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
-<li>可以看到，FB共分为两大部分，Backbone和Branch。</li>
-<li>Backbone由12层Transformer组成，基本就是BERT的结构，Branch则是从不同层中蒸馏出来的student model。</li>
-</ul>
-<hr>
+<li>根据样本的自适应推理 –&gt; Adaptive inference</li>
+<li>独特的自蒸馏过程 –&gt; Knowledge distillation
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/cFrost0/2021/05/07/FastBert-zh/#more" rel="contents">
@@ -303,7 +296,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-07 07:58:06" itemprop="dateModified" datetime="2021-05-07T07:58:06Z">2021-05-07</time>
+        <time title="Modified: 2021-05-07 08:06:13" itemprop="dateModified" datetime="2021-05-07T08:06:13Z">2021-05-07</time>
       </span>
 
   
@@ -329,14 +322,7 @@
 </ul>
 <ol>
 <li>sample-wise adaptive mechanism –&gt; Adaptive inference</li>
-<li>unique self-distillation process –&gt; Knowledge distillation</li>
-</ol>
-<ul>
-<li>This picture shows the framework of FastBert：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
-<li>According to it, FastBert has two parts, one is Backbone another one is Branch. </li>
-<li>Backbone contains 12 layers of transformers, similar to the stucture of BERT. As to Branch, it distillings the student model from different layers. </li>
-</ul>
-<hr>
+<li>unique self-distillation process –&gt; Knowledge distillation
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/cFrost0/2021/05/07/FastBert/#more" rel="contents">
