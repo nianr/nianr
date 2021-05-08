@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.logiclines.top/2021/05/08/LanModel/</loc>
+    
+    <lastmod>2021-05-08</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.logiclines.top/2021/05/08/NLTK/</loc>
     
     <lastmod>2021-05-08</lastmod>
@@ -95,14 +102,14 @@
   </url>
   
   <url>
-    <loc>https://www.logiclines.top/tags/English/</loc>
+    <loc>https://www.logiclines.top/tags/NLPtools/</loc>
     <lastmod>2021-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.logiclines.top/tags/NLPtools/</loc>
+    <loc>https://www.logiclines.top/tags/English/</loc>
     <lastmod>2021-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
