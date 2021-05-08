@@ -214,7 +214,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-08 09:47:10 / Modified: 01:49:45" itemprop="dateCreated datePublished" datetime="2021-05-08T09:47:10Z">2021-05-08</time>
+      <time title="Created: 2021-05-08 09:47:10 / Modified: 01:56:29" itemprop="dateCreated datePublished" datetime="2021-05-08T09:47:10Z">2021-05-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -238,16 +238,15 @@
     <div class="post-body" itemprop="articleBody">
           <p><a href="">English version is coming soon.</a></p>
 <ol>
-<li>安装nltk<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nltk</span><br></pre></td></tr></table></figure></li>
-<li>下载nltk_data<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clone https://github.com/nltk/nltk_data.git</span><br></pre></td></tr></table></figure></li>
-<li>解压缩<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf nltk_data-gh-pages.zip</span><br></pre></td></tr></table></figure></li>
-<li>将<code>packages</code>重命名为<code>nltk_data</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ./nltk_data-gh-pages</span><br><span class="line">mv ./packages ./nltk_data</span><br></pre></td></tr></table></figure></li>
-<li>查看<code>nltk_data</code>的安装路径，运行以下python命令<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line"><span class="built_in">print</span>(nltk.data.path)</span><br></pre></td></tr></table></figure></li>
-<li>将下载好的<code>nltk_data</code>复制到任意安装路径下，注意，上一步中输出的路径包含<code>.../nltk_data/</code>，但如果之前未安装过nltk_data，该目录是不存在的，所以我们可以直接复制到该目录的上级目录，举例来说：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">% 如果第六步中的输出结果如下，选择其中的某路径：</span><br><span class="line">[..., &#x27;/usr/local/share/nltk_data&#x27;, ...]</span><br><span class="line">% 那么 /usr/local/share/nltk_data 该路径可能会不存在，可以通过如下命令验证，在命令行中输入：</span><br><span class="line">ls /usr/local/share/nltk_data</span><br><span class="line">% 如果得到：</span><br><span class="line">ls: /usr/local/share/nltk_data: No such file or directory</span><br><span class="line">% 则说明该路径不存在</span><br><span class="line">% 那么我们将 nltk_data 复制到 /usr/local/share </span><br><span class="line">cp -r ./nltk_dta /usr/local/share</span><br></pre></td></tr></table></figure></li>
-<li>当需要使用某模块时，需要将该模块下的压缩文件解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip ./nltk_data/tokenizers/punkt.zip</span><br></pre></td></tr></table></figure></li>
-<li>测试<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.book <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出以下结果则安装成功</span></span><br><span class="line">*** Introductory Examples <span class="keyword">for</span> the NLTK Book ***</span><br><span class="line">Loading text1, ..., text9 <span class="keyword">and</span> sent1, ..., sent9</span><br><span class="line"><span class="type">Type</span> the name of the text <span class="keyword">or</span> sentence to view it.</span><br><span class="line"><span class="type">Type</span>: <span class="string">&#x27;texts()&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;sents()&#x27;</span> to <span class="built_in">list</span> the materials.</span><br><span class="line">text1: Moby Dick by Herman Melville <span class="number">1851</span></span><br><span class="line">text2: Sense <span class="keyword">and</span> Sensibility by Jane Austen <span class="number">1811</span></span><br><span class="line">text3: The Book of Genesis</span><br><span class="line">text4: Inaugural Address Corpus</span><br><span class="line">text5: Chat Corpus</span><br><span class="line">text6: Monty Python <span class="keyword">and</span> the Holy Grail</span><br><span class="line">text7: Wall Street Journal</span><br><span class="line">text8: Personals Corpus</span><br><span class="line">text9: The Man Who Was Thursday by G . K . Chesterton <span class="number">1908</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-
+<li>安装nltk<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nltk</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/08/NLTK/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

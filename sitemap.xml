@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.logiclines.top/tags/index.html</loc>
+    <loc>https://www.logiclines.top/2021/05/08/NLTK/</loc>
     
     <lastmod>2021-05-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://www.logiclines.top/2021/05/08/NLTK/</loc>
+    <loc>https://www.logiclines.top/tags/index.html</loc>
     
     <lastmod>2021-05-08</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.logiclines.top/tags/English/</loc>
+    <loc>https://www.logiclines.top/tags/%E4%B8%AD%E6%96%87/</loc>
     <lastmod>2021-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -95,7 +95,7 @@
   </url>
   
   <url>
-    <loc>https://www.logiclines.top/tags/%E4%B8%AD%E6%96%87/</loc>
+    <loc>https://www.logiclines.top/tags/English/</loc>
     <lastmod>2021-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
