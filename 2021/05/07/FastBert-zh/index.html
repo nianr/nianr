@@ -27,22 +27,22 @@
 <meta property="og:site_name" content="cFrost">
 <meta property="og:description" content="English Version Abstract 自适应的推理时间 在fine-tune阶段独特的自蒸馏（self-distillation）机制 比BERT快1-12倍">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://i2.tiimg.com/737213/43011fa8c3ff496d.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/03c70448624600b7.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/c34cfc32265b4192.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/af18721d781cc41c.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/0182af044794ef3c.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/8ba627d5a18d42be.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/93962cf227a452f7.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/C3LYkHn2KygZzoa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/i3nVyKM4x1rtf9T.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/pHBTDbF5lYuOiNm.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/AnTf4NGRPe5cjlg.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/TMCZlbzJgUSk2wd.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/Vtmc8Al1LTCj92n.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/VEDkl2z91Bp6Rtn.png">
 <meta property="article:published_time" content="2021-05-07T15:05:41.000Z">
-<meta property="article:modified_time" content="2021-05-07T09:32:38.281Z">
+<meta property="article:modified_time" content="2021-05-10T05:51:46.600Z">
 <meta property="article:author" content="Evan Chen">
 <meta property="article:tag" content="NLP">
 <meta property="article:tag" content="中文">
 <meta property="article:tag" content="Paper">
 <meta property="article:tag" content="BERT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://i2.tiimg.com/737213/43011fa8c3ff496d.png">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/10/C3LYkHn2KygZzoa.png">
 
 
 <link rel="canonical" href="https://www.logiclines.top/2021/05/07/FastBert-zh/">
@@ -148,7 +148,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -230,10 +230,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-07 15:05:41 / Modified: 09:32:38" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
+      <time title="Created: 2021-05-07 15:05:41" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-10 05:51:46" itemprop="dateModified" datetime="2021-05-10T05:51:46Z">2021-05-10</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -269,14 +275,14 @@
 <li>独特的自蒸馏过程 –&gt; Knowledge distillation</li>
 </ol>
 <ul>
-<li>下图是FB的整体结构：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
+<li>下图是FB的整体结构：<br><img src="https://i.loli.net/2021/05/10/C3LYkHn2KygZzoa.png" alt="FB struction"></li>
 <li>可以看到，FB共分为两大部分，Backbone和Branch。</li>
 <li>Backbone由12层Transformer组成，基本就是BERT的结构，Branch则是从不同层中蒸馏出来的student model。</li>
 </ul>
 <hr>
 <h3 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h3><ul>
 <li>主干网络共包含12层Transformer，所有的Embedding、Transfomer都和Bert完全一样。</li>
-<li>与Bert不同的是，它多了一个Teacher-Classifer，结构如下所示：<br><img src="http://i2.tiimg.com/737213/03c70448624600b7.png" alt="backbone"></li>
+<li>与Bert不同的是，它多了一个Teacher-Classifer，结构如下所示：<br><img src="https://i.loli.net/2021/05/10/i3nVyKM4x1rtf9T.png" alt="backbone"></li>
 <li>Transformer输出768dim，先通过一个全连接层压缩到128dim，再通过self-attention，self-attention不改变维度，而后通过第二个全连接层，压缩到N-dim，N为分类类别数，最后通过sofmax得到每个类别的概率pt。</li>
 </ul>
 <hr>
@@ -300,7 +306,7 @@
 </ul>
 </li>
 <li>fine-tune Branch<ul>
-<li>这一步是拿Teacher-Classifer的结果来训练Student-Classifer，作者定义了如下的损失函数：<br><img src="http://i2.tiimg.com/737213/c34cfc32265b4192.png" alt="Dkl"><br><img src="http://i2.tiimg.com/737213/af18721d781cc41c.png" alt="Loss"></li>
+<li>这一步是拿Teacher-Classifer的结果来训练Student-Classifer，作者定义了如下的损失函数：<br><img src="https://i.loli.net/2021/05/10/pHBTDbF5lYuOiNm.png" alt="Dkl"><br><img src="https://i.loli.net/2021/05/10/AnTf4NGRPe5cjlg.png" alt="Loss"></li>
 <li>KL散度就是相对熵，总的损失函数是对Teacher和Student之间的KL散度求和。</li>
 <li>在这一步的训练中没有使用Label，所以可以用无监督训练Student。</li>
 </ul>
@@ -308,12 +314,12 @@
 </ol>
 <hr>
 <h3 id="Adaptive-inference"><a href="#Adaptive-inference" class="headerlink" title="Adaptive inference"></a>Adaptive inference</h3><ul>
-<li>FB中的adaptive inference是“sample-wise”的，指的是对每一个样本，模型会自适应地选择使用到哪个Student-Classifer，为此，作者做出了如下的定义：<br><img src="http://i2.tiimg.com/737213/0182af044794ef3c.png" alt="uncertainty"></li>
+<li>FB中的adaptive inference是“sample-wise”的，指的是对每一个样本，模型会自适应地选择使用到哪个Student-Classifer，为此，作者做出了如下的定义：<br><img src="https://i.loli.net/2021/05/10/TMCZlbzJgUSk2wd.png" alt="uncertainty"></li>
 <li>在每一层Transformer之后，计算该分类输出的不确定性，上式其实就是信息熵。</li>
-<li>然后作者做了一个假设，不确定性越低，模型的准确率就越高，于是他为不确定性设置了一个阈值Speed，超过这个阈值的被传入下一层Transformer，低于这个阈值的直接使用当前的Student-Classifer做分类。<br><img src="http://i2.tiimg.com/737213/8ba627d5a18d42be.png" alt="def"></li>
+<li>然后作者做了一个假设，不确定性越低，模型的准确率就越高，于是他为不确定性设置了一个阈值Speed，超过这个阈值的被传入下一层Transformer，低于这个阈值的直接使用当前的Student-Classifer做分类。<br><img src="https://i.loli.net/2021/05/10/Vtmc8Al1LTCj92n.png" alt="def"></li>
 </ul>
 <hr>
-<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><img src="http://i2.tiimg.com/737213/93962cf227a452f7.png" alt="result"></p>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><img src="https://i.loli.net/2021/05/10/VEDkl2z91Bp6Rtn.png" alt="result"></p>
 
     </div>
 

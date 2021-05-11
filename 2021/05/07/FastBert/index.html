@@ -27,22 +27,22 @@
 <meta property="og:site_name" content="cFrost">
 <meta property="og:description" content="中文版 Abstract Original paper adaptive inference time unique self-distillation mechanism at fine-tuning speed up by 1 to 12 times than BERT">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://i2.tiimg.com/737213/43011fa8c3ff496d.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/03c70448624600b7.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/c34cfc32265b4192.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/af18721d781cc41c.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/0182af044794ef3c.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/8ba627d5a18d42be.png">
-<meta property="og:image" content="http://i2.tiimg.com/737213/93962cf227a452f7.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/C3LYkHn2KygZzoa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/i3nVyKM4x1rtf9T.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/pHBTDbF5lYuOiNm.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/AnTf4NGRPe5cjlg.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/TMCZlbzJgUSk2wd.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/Vtmc8Al1LTCj92n.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/10/VEDkl2z91Bp6Rtn.png">
 <meta property="article:published_time" content="2021-05-06T18:34:13.000Z">
-<meta property="article:modified_time" content="2021-05-07T09:40:05.066Z">
+<meta property="article:modified_time" content="2021-05-10T05:52:34.160Z">
 <meta property="article:author" content="Evan Chen">
 <meta property="article:tag" content="NLP">
 <meta property="article:tag" content="Paper">
 <meta property="article:tag" content="BERT">
 <meta property="article:tag" content="English">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://i2.tiimg.com/737213/43011fa8c3ff496d.png">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/10/C3LYkHn2KygZzoa.png">
 
 
 <link rel="canonical" href="https://www.logiclines.top/2021/05/07/FastBert/">
@@ -148,7 +148,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -238,7 +238,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-07 09:40:05" itemprop="dateModified" datetime="2021-05-07T09:40:05Z">2021-05-07</time>
+        <time title="Modified: 2021-05-10 05:52:34" itemprop="dateModified" datetime="2021-05-10T05:52:34Z">2021-05-10</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -276,14 +276,14 @@
 <li>unique self-distillation process –&gt; Knowledge distillation</li>
 </ol>
 <ul>
-<li>This picture shows the framework of FastBert：<br><img src="http://i2.tiimg.com/737213/43011fa8c3ff496d.png" alt="FB struction"></li>
+<li>This picture shows the framework of FastBert：<br><img src="https://i.loli.net/2021/05/10/C3LYkHn2KygZzoa.png" alt="FB struction"></li>
 <li>According to it, FastBert has two parts, one is Backbone another one is Branch. </li>
 <li>Backbone contains 12 layers of transformers, similar to the stucture of BERT. As to Branch, it distillings the student model from different layers. </li>
 </ul>
 <hr>
 <h3 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h3><ul>
 <li>All the embedding layers inside the 12 transformers are the same as BERT. </li>
-<li>The different from BERT is that it has an additional Teacher-Classifer, the structure is as follows:<br><img src="http://i2.tiimg.com/737213/03c70448624600b7.png" alt="backbone"></li>
+<li>The different from BERT is that it has an additional Teacher-Classifer, the structure is as follows:<br><img src="https://i.loli.net/2021/05/10/i3nVyKM4x1rtf9T.png" alt="backbone"></li>
 <li>Transformer outputs 768-dims features. They are compressed to 128-dims by a full connected layer firstly, then though self-attention layer witch doesn’t change the dimension. And then they though the second full connected layer, compressed to N-dim, where N is the the number of classification categories. Finally we get the probability pt of each category by applying sofmax.</li>
 </ul>
 <hr>
@@ -307,7 +307,7 @@
 </ul>
 </li>
 <li>fine-tune Branch<ul>
-<li>This step is to train Student-Classifer by using the result of Teacher-Classifer. The author defines the following loss function:<br><img src="http://i2.tiimg.com/737213/c34cfc32265b4192.png" alt="Dkl"><br><img src="http://i2.tiimg.com/737213/af18721d781cc41c.png" alt="Loss"></li>
+<li>This step is to train Student-Classifer by using the result of Teacher-Classifer. The author defines the following loss function:<br><img src="https://i.loli.net/2021/05/10/pHBTDbF5lYuOiNm.png" alt="Dkl"><br><img src="https://i.loli.net/2021/05/10/AnTf4NGRPe5cjlg.png" alt="Loss"></li>
 <li>KL divergence is relative entropy, and the total loss function is the sum of the KL divergence between Teacher and Student. (ps: I don’t know the name of “KL divergence” clearly, so please check it further if you want to use it in a formal article. )</li>
 <li>Label is not used in this step of training, so we can use unsupervised training Student-Classifer。</li>
 </ul>
@@ -315,12 +315,12 @@
 </ol>
 <hr>
 <h3 id="Adaptive-inference"><a href="#Adaptive-inference" class="headerlink" title="Adaptive inference"></a>Adaptive inference</h3><ul>
-<li>Adaptive inference in FastBert is “sample-wise”, which means that for each sample, the model will adaptively choose which Student-Classifer to use. For this reason, the author has made the following definition:<br><img src="http://i2.tiimg.com/737213/0182af044794ef3c.png" alt="uncertainty"></li>
+<li>Adaptive inference in FastBert is “sample-wise”, which means that for each sample, the model will adaptively choose which Student-Classifer to use. For this reason, the author has made the following definition:<br><img src="https://i.loli.net/2021/05/10/TMCZlbzJgUSk2wd.png" alt="uncertainty"></li>
 <li>After each layer of transformer, the uncertainty of each categroy is computed. The above formula is actually information entropy. </li>
-<li>Then the author made an assumption that the lower the uncertainty, the higher the accuracy of the model. So he set a threshold speed for the uncertainty, and those that exceed this threshold are passed to the next layer of transformer, others are classified by the current Student-Classifer.<br><img src="http://i2.tiimg.com/737213/8ba627d5a18d42be.png" alt="def"></li>
+<li>Then the author made an assumption that the lower the uncertainty, the higher the accuracy of the model. So he set a threshold speed for the uncertainty, and those that exceed this threshold are passed to the next layer of transformer, others are classified by the current Student-Classifer.<br><img src="https://i.loli.net/2021/05/10/Vtmc8Al1LTCj92n.png" alt="def"></li>
 </ul>
 <hr>
-<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><img src="http://i2.tiimg.com/737213/93962cf227a452f7.png" alt="result"></p>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><img src="https://i.loli.net/2021/05/10/VEDkl2z91Bp6Rtn.png" alt="result"></p>
 
     </div>
 

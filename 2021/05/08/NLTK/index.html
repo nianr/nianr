@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.logiclines.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="English version is coming soon.  安装nltk1pip install nltk">
+<meta name="description" content="English version is coming soon.  安装nltkpip install nltk">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NLTK及nltk_data安装教程">
 <meta property="og:url" content="https://www.logiclines.top/2021/05/08/NLTK/index.html">
 <meta property="og:site_name" content="cFrost">
-<meta property="og:description" content="English version is coming soon.  安装nltk1pip install nltk">
+<meta property="og:description" content="English version is coming soon.  安装nltkpip install nltk">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-08T09:47:10.000Z">
 <meta property="article:modified_time" content="2021-05-08T01:56:29.693Z">
@@ -138,7 +138,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -246,15 +246,40 @@
     <div class="post-body" itemprop="articleBody">
         <p><a href="">English version is coming soon.</a></p>
 <ol>
-<li>安装nltk<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install nltk</span><br></pre></td></tr></table></figure>
+<li>安装nltk<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> nltk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <span id="more"></span></li>
-<li>下载nltk_data<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clone https://github.com/nltk/nltk_data.git</span><br></pre></td></tr></table></figure></li>
-<li>解压缩<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf nltk_data-gh-pages.zip</span><br></pre></td></tr></table></figure></li>
-<li>将<code>packages</code>重命名为<code>nltk_data</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ./nltk_data-gh-pages</span><br><span class="line">mv ./packages ./nltk_data</span><br></pre></td></tr></table></figure></li>
-<li>查看<code>nltk_data</code>的安装路径，运行以下python命令<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line"><span class="built_in">print</span>(nltk.data.path)</span><br></pre></td></tr></table></figure></li>
-<li>将下载好的<code>nltk_data</code>复制到任意安装路径下，注意，上一步中输出的路径包含<code>.../nltk_data/</code>，但如果之前未安装过nltk_data，该目录是不存在的，所以我们可以直接复制到该目录的上级目录，举例来说：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">% 如果第六步中的输出结果如下，选择其中的某路径：</span><br><span class="line">[..., &#x27;/usr/local/share/nltk_data&#x27;, ...]</span><br><span class="line">% 那么 /usr/local/share/nltk_data 该路径可能会不存在，可以通过如下命令验证，在命令行中输入：</span><br><span class="line">ls /usr/local/share/nltk_data</span><br><span class="line">% 如果得到：</span><br><span class="line">ls: /usr/local/share/nltk_data: No such file or directory</span><br><span class="line">% 则说明该路径不存在</span><br><span class="line">% 那么我们将 nltk_data 复制到 /usr/local/share </span><br><span class="line">cp -r ./nltk_dta /usr/local/share</span><br></pre></td></tr></table></figure></li>
-<li>当需要使用某模块时，需要将该模块下的压缩文件解压<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip ./nltk_data/tokenizers/punkt.zip</span><br></pre></td></tr></table></figure></li>
-<li>测试<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nltk.book <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出以下结果则安装成功</span></span><br><span class="line">*** Introductory Examples <span class="keyword">for</span> the NLTK Book ***</span><br><span class="line">Loading text1, ..., text9 <span class="keyword">and</span> sent1, ..., sent9</span><br><span class="line"><span class="type">Type</span> the name of the text <span class="keyword">or</span> sentence to view it.</span><br><span class="line"><span class="type">Type</span>: <span class="string">&#x27;texts()&#x27;</span> <span class="keyword">or</span> <span class="string">&#x27;sents()&#x27;</span> to <span class="built_in">list</span> the materials.</span><br><span class="line">text1: Moby Dick by Herman Melville <span class="number">1851</span></span><br><span class="line">text2: Sense <span class="keyword">and</span> Sensibility by Jane Austen <span class="number">1811</span></span><br><span class="line">text3: The Book of Genesis</span><br><span class="line">text4: Inaugural Address Corpus</span><br><span class="line">text5: Chat Corpus</span><br><span class="line">text6: Monty Python <span class="keyword">and</span> the Holy Grail</span><br><span class="line">text7: Wall Street Journal</span><br><span class="line">text8: Personals Corpus</span><br><span class="line">text9: The Man Who Was Thursday by G . K . Chesterton <span class="number">1908</span></span><br></pre></td></tr></table></figure></li>
+<li>下载nltk_data<pre class="line-numbers language-none"><code class="language-none">clone https:&#x2F;&#x2F;github.com&#x2F;nltk&#x2F;nltk_data.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>解压缩<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tar</span> -xvf nltk_data-gh-pages.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>将<code>packages</code>重命名为<code>nltk_data</code><pre class="line-numbers language-none"><code class="language-none">cd .&#x2F;nltk_data-gh-pages
+mv .&#x2F;packages .&#x2F;nltk_data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>查看<code>nltk_data</code>的安装路径，运行以下python命令<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> nltk
+<span class="token keyword">print</span><span class="token punctuation">(</span>nltk<span class="token punctuation">.</span>data<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>将下载好的<code>nltk_data</code>复制到任意安装路径下，注意，上一步中输出的路径包含<code>.../nltk_data/</code>，但如果之前未安装过nltk_data，该目录是不存在的，所以我们可以直接复制到该目录的上级目录，举例来说：<pre class="line-numbers language-none"><code class="language-none">% 如果第六步中的输出结果如下，选择其中的某路径：
+[..., &#39;&#x2F;usr&#x2F;local&#x2F;share&#x2F;nltk_data&#39;, ...]
+% 那么 &#x2F;usr&#x2F;local&#x2F;share&#x2F;nltk_data 该路径可能会不存在，可以通过如下命令验证，在命令行中输入：
+ls &#x2F;usr&#x2F;local&#x2F;share&#x2F;nltk_data
+% 如果得到：
+ls: &#x2F;usr&#x2F;local&#x2F;share&#x2F;nltk_data: No such file or directory
+% 则说明该路径不存在
+% 那么我们将 nltk_data 复制到 &#x2F;usr&#x2F;local&#x2F;share 
+cp -r .&#x2F;nltk_dta &#x2F;usr&#x2F;local&#x2F;share<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>当需要使用某模块时，需要将该模块下的压缩文件解压<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">unzip</span> ./nltk_data/tokenizers/punkt.zip<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>测试<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> nltk<span class="token punctuation">.</span>book <span class="token keyword">import</span> <span class="token operator">*</span>
+
+<span class="token comment">#输出以下结果则安装成功</span>
+<span class="token operator">**</span><span class="token operator">*</span> Introductory Examples <span class="token keyword">for</span> the NLTK Book <span class="token operator">**</span><span class="token operator">*</span>
+Loading text1<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> text9 <span class="token keyword">and</span> sent1<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> sent9
+Type the name of the text <span class="token keyword">or</span> sentence to view it<span class="token punctuation">.</span>
+Type<span class="token punctuation">:</span> <span class="token string">'texts()'</span> <span class="token keyword">or</span> <span class="token string">'sents()'</span> to <span class="token builtin">list</span> the materials<span class="token punctuation">.</span>
+text1<span class="token punctuation">:</span> Moby Dick by Herman Melville <span class="token number">1851</span>
+text2<span class="token punctuation">:</span> Sense <span class="token keyword">and</span> Sensibility by Jane Austen <span class="token number">1811</span>
+text3<span class="token punctuation">:</span> The Book of Genesis
+text4<span class="token punctuation">:</span> Inaugural Address Corpus
+text5<span class="token punctuation">:</span> Chat Corpus
+text6<span class="token punctuation">:</span> Monty Python <span class="token keyword">and</span> the Holy Grail
+text7<span class="token punctuation">:</span> Wall Street Journal
+text8<span class="token punctuation">:</span> Personals Corpus
+text9<span class="token punctuation">:</span> The Man Who Was Thursday by G <span class="token punctuation">.</span> K <span class="token punctuation">.</span> Chesterton <span class="token number">1908</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 
     </div>
