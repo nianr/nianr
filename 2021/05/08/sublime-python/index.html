@@ -20,25 +20,44 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.logiclines.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="安装Python 推荐[Anaconda]{https:&#x2F;&#x2F;www.anaconda.com&#x2F;distribution&#x2F;} 或者可以选择pyenv，使用brew安装：$ brew install pyenv">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sublime_python">
+<meta property="og:title" content="Mac配置Sublime text3 python环境">
 <meta property="og:url" content="https://www.logiclines.top/2021/05/08/sublime-python/index.html">
 <meta property="og:site_name" content="cFrost">
+<meta property="og:description" content="安装Python 推荐[Anaconda]{https:&#x2F;&#x2F;www.anaconda.com&#x2F;distribution&#x2F;} 或者可以选择pyenv，使用brew安装：$ brew install pyenv">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/m8fCde3o1tb6cUY.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/DCPWXsVmHjM5JEh.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/TJVU27QPAzXhqo9.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/OiBlAIJ9hyzwSY1.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/nC3T4AxpUkzscuv.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/GCg4DmSj89u3MhW.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/7gaKUFDZ8hnSkbV.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/dNytmu92OHVMhxG.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/usywWxTR1Fb9YDG.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/qZvbKd3J7r1oNEz.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/c8Okgx6Yz7KJBNt.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/XrVyj74GCOb8mct.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/pqGIPtEW5Dxa1oM.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/12/sgaWt9BhYZEQNxk.png">
 <meta property="article:published_time" content="2021-05-08T10:43:11.000Z">
-<meta property="article:modified_time" content="2021-05-08T02:43:11.701Z">
+<meta property="article:modified_time" content="2021-05-12T01:58:37.558Z">
 <meta property="article:author" content="Evan Chen">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Editor">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/12/m8fCde3o1tb6cUY.png">
 
 
 <link rel="canonical" href="https://www.logiclines.top/2021/05/08/sublime-python/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.logiclines.top&#x2F;2021&#x2F;05&#x2F;08&#x2F;sublime-python&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;08&#x2F;sublime-python&#x2F;&quot;,&quot;title&quot;:&quot;sublime_python&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.logiclines.top&#x2F;2021&#x2F;05&#x2F;08&#x2F;sublime-python&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;08&#x2F;sublime-python&#x2F;&quot;,&quot;title&quot;:&quot;Mac配置Sublime text3 python环境&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>sublime_python | cFrost</title><script src="/js/config.js"></script>
+<title>Mac配置Sublime text3 python环境 | cFrost</title><script src="/js/config.js"></script>
   
 
 
@@ -105,7 +124,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -118,6 +137,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Python"><span class="nav-number">1.</span> <span class="nav-text">安装Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDSublime-text3"><span class="nav-number">2.</span> <span class="nav-text">下载Sublime text3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85package-control"><span class="nav-number">3.</span> <span class="nav-text">安装package control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEsublime%E7%9A%84python%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="nav-number">4.</span> <span class="nav-text">配置sublime的python解释器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85jedi%E6%8F%92%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">安装jedi插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEjedi"><span class="nav-number">6.</span> <span class="nav-text">配置jedi</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -138,11 +158,11 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -205,7 +225,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          sublime_python
+          Mac配置Sublime text3 python环境
         </h1>
 
         <div class="post-meta-container">
@@ -215,9 +235,24 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-05-08 10:43:11 / Modified: 02:43:11" itemprop="dateCreated datePublished" datetime="2021-05-08T10:43:11Z">2021-05-08</time>
+      <time title="Created: 2021-05-08 10:43:11" itemprop="dateCreated datePublished" datetime="2021-05-08T10:43:11Z">2021-05-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-12 01:58:37" itemprop="dateModified" datetime="2021-05-12T01:58:37Z">2021-05-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+        </span>
     </span>
 
   
@@ -230,7 +265,61 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <h2 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h2><ul>
+<li>推荐[Anaconda]{<a target="_blank" rel="noopener" href="https://www.anaconda.com/distribution/%7D">https://www.anaconda.com/distribution/}</a></li>
+<li>或者可以选择pyenv，使用brew安装：<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ brew <span class="token function">install</span> pyenv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<span id="more"></span></li>
+<li>之后通过以下命令安装python3<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ pyenv <span class="token function">install</span> <span class="token number">3.7</span>.3
+$ pyenv <span class="token builtin class-name">local</span> <span class="token number">3.7</span>.3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>最后，查看python版本，验证<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ python -V<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ul>
+<hr>
+<h2 id="下载Sublime-text3"><a href="#下载Sublime-text3" class="headerlink" title="下载Sublime text3"></a>下载Sublime text3</h2><ul>
+<li>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1aIg_ZhSasoApppxzi6O1ew">https://pan.baidu.com/s/1aIg_ZhSasoApppxzi6O1ew</a> 提取码: 7buq</li>
+<li>将图标拖入即可完成安装<br><img src="https://i.loli.net/2021/05/12/m8fCde3o1tb6cUY.png" alt="TNT"></li>
+</ul>
+<hr>
+<h2 id="安装package-control"><a href="#安装package-control" class="headerlink" title="安装package control"></a>安装package control</h2><ol>
+<li>打开链接<a target="_blank" rel="noopener" href="https://packagecontrol.io/installation%EF%BC%8C%E4%B8%8B%E8%BD%BD%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6">https://packagecontrol.io/installation，下载这个文件</a><br><img src="https://i.loli.net/2021/05/12/DCPWXsVmHjM5JEh.png" alt="packagecontrol"></li>
+<li>打开sublime text3，使用快捷键cmd+shift+P，输入browse，选择Browse Packages会打开一个Finder文件夹<br><img src="https://i.loli.net/2021/05/12/TJVU27QPAzXhqo9.png" alt="browse"></li>
+<li>使用快捷键cmd+⬆️，来到上一级目录，打开<code>Installed Packages</code>并将之前下载的文件复制到该目录下</li>
+<li>最后回到sublime text3，使用快捷键cmd+shift+P，输入install，出现如下提示则安装完成<br><img src="https://i.loli.net/2021/05/12/OiBlAIJ9hyzwSY1.png" alt="install"></li>
+<li>如果出现Package安装很慢的情况，可以使用快捷键cmd+shift+P打开命令窗口之后，输入channel，选择Add Channel，在下面输入<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/HBLong/channel_v3_daily/master/channel_v3.json">https://raw.githubusercontent.com/HBLong/channel_v3_daily/master/channel_v3.json</a><br><img src="https://i.loli.net/2021/05/12/nC3T4AxpUkzscuv.png" alt="channel"><br><img src="https://i.loli.net/2021/05/12/GCg4DmSj89u3MhW.png" alt="url"></li>
+</ol>
+<hr>
+<h2 id="配置sublime的python解释器"><a href="#配置sublime的python解释器" class="headerlink" title="配置sublime的python解释器"></a>配置sublime的python解释器</h2><ol>
+<li>选择菜单Tool -&gt; Build System -&gt; New Build System<br><img src="https://i.loli.net/2021/05/12/7gaKUFDZ8hnSkbV.png" alt="New Build System"></li>
+<li>在文件中添加如下代码<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+	<span class="token property">"cmd"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"/Users/chenyifan/.pyenv/versions/3.7.3/bin/python3.7"</span><span class="token punctuation">,</span> <span class="token string">"-u"</span><span class="token punctuation">,</span> <span class="token string">"$file"</span><span class="token punctuation">]</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li>之后写一个hello world，快捷键cmd+B运行<br><img src="https://i.loli.net/2021/05/12/dNytmu92OHVMhxG.png" alt="hello world"></li>
+<li>得到输出<br><img src="https://i.loli.net/2021/05/12/usywWxTR1Fb9YDG.png" alt="output"></li>
+</ol>
+<p>-</p>
+<hr>
+<h2 id="安装jedi插件"><a href="#安装jedi插件" class="headerlink" title="安装jedi插件"></a>安装jedi插件</h2><ul>
+<li>jedi插件主要是用于代码提示</li>
+</ul>
+<ol>
+<li>使用快捷键cmd+shift+P，输入install，选择Install Package（如上图），等待一会弹出如下窗口，等待时间较长则执行上面的第5步<br><img src="https://i.loli.net/2021/05/12/qZvbKd3J7r1oNEz.png" alt="install"></li>
+<li>之后输入jedi，选择Jedi - Python autocompletion<br><img src="https://i.loli.net/2021/05/12/c8Okgx6Yz7KJBNt.png" alt="Jedi"></li>
+<li>等待安装，如安装时间较长可以考虑更换热点（如果网不好下的挺慢的…）</li>
+</ol>
+<hr>
+<h2 id="配置jedi"><a href="#配置jedi" class="headerlink" title="配置jedi"></a>配置jedi</h2><ol>
+<li>选择菜单Performance -&gt; Package Settings -&gt; Jedi -&gt; Setting-Default</li>
+<li>更改三项内容，如下图，其中virtualenv是python虚拟环境的目录，如果没有安装虚拟环境可以不改；interpreter是python解释器的目录;最后一项是python包的安装路径<br><img src="https://i.loli.net/2021/05/12/XrVyj74GCOb8mct.png" alt="Setting"></li>
+<li>如果找不到相关的路径，可以通过如下命令查看：</li>
+</ol>
+<ul>
+<li>python_package_paths<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> sys
+sys<span class="token punctuation">.</span>path<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<img src="https://i.loli.net/2021/05/12/pqGIPtEW5Dxa1oM.png" alt="sys.path"></li>
+<li>python_interpreter<pre class="line-numbers language-none"><code class="language-none">import sys
+sys.executable<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<img src="https://i.loli.net/2021/05/12/sgaWt9BhYZEQNxk.png" alt="path"></li>
+</ul>
+
     </div>
 
     
@@ -238,6 +327,10 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Editor/" rel="tag"># Editor</a>
+          </div>
 
         
 
@@ -248,6 +341,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/05/12/python-tips/" rel="next" title="Python的一些小技巧及注意事项">
+                  Python的一些小技巧及注意事项 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>

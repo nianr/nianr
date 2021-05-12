@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.logiclines.top/2021/05/12/python-tips/</loc>
+    
+    <lastmod>2021-05-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/2021/05/08/sublime-python/</loc>
+    
+    <lastmod>2021-05-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/tags/index.html</loc>
+    
+    <lastmod>2021-05-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/categories/index.html</loc>
+    
+    <lastmod>2021-05-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.logiclines.top/2021/05/08/LanModel/</loc>
     
     <lastmod>2021-05-11</lastmod>
@@ -30,21 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.logiclines.top/2021/05/08/sublime-python/</loc>
-    
-    <lastmod>2021-05-08</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.logiclines.top/2021/05/08/NLTK/</loc>
-    
-    <lastmod>2021-05-08</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.logiclines.top/tags/index.html</loc>
     
     <lastmod>2021-05-08</lastmod>
     
@@ -57,24 +71,10 @@
     
   </url>
   
-  <url>
-    <loc>https://www.logiclines.top/categories/index.html</loc>
-    
-    <lastmod>2021-05-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.logiclines.top/2021/05/05/hello-world/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://www.logiclines.top/</loc>
-    <lastmod>2021-05-11</lastmod>
+    <lastmod>2021-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -82,49 +82,63 @@
   
   <url>
     <loc>https://www.logiclines.top/tags/NLP/</loc>
-    <lastmod>2021-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.logiclines.top/tags/English/</loc>
-    <lastmod>2021-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.logiclines.top/tags/Paper/</loc>
-    <lastmod>2021-05-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.logiclines.top/tags/BERT/</loc>
-    <lastmod>2021-05-11</lastmod>
+    <lastmod>2021-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.logiclines.top/tags/%E4%B8%AD%E6%96%87/</loc>
-    <lastmod>2021-05-11</lastmod>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/tags/Paper/</loc>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/tags/BERT/</loc>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/tags/English/</loc>
+    <lastmod>2021-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.logiclines.top/tags/NLPtools/</loc>
-    <lastmod>2021-05-11</lastmod>
+    <lastmod>2021-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://www.logiclines.top/tags/Linguistics/</loc>
-    <lastmod>2021-05-11</lastmod>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/tags/Python/</loc>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/tags/Editor/</loc>
+    <lastmod>2021-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -133,7 +147,14 @@
   
   <url>
     <loc>https://www.logiclines.top/categories/NLP/</loc>
-    <lastmod>2021-05-11</lastmod>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.logiclines.top/categories/Python/</loc>
+    <lastmod>2021-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

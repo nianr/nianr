@@ -20,23 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;www.logiclines.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Muse&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="cFrost">
-<meta property="og:url" content="https://www.logiclines.top/index.html">
+<meta name="description" content="深拷贝，浅拷贝 直接赋值：传递对象的引用，原列表改变，被赋值的也改变  浅拷贝：a改变，b也改变import copy b &#x3D; copy.copy(a)  [[WSDAD论文修改文档]] * num内层的列表属于浅拷贝（使用循环append([])）  深拷贝：a改变，b不变import copy b &#x3D; copy.deepcopy(a)  print不以科学计数法输出import numpy a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python的一些小技巧及注意事项">
+<meta property="og:url" content="https://www.logiclines.top/2021/05/12/python-tips/index.html">
 <meta property="og:site_name" content="cFrost">
+<meta property="og:description" content="深拷贝，浅拷贝 直接赋值：传递对象的引用，原列表改变，被赋值的也改变  浅拷贝：a改变，b也改变import copy b &#x3D; copy.copy(a)  [[WSDAD论文修改文档]] * num内层的列表属于浅拷贝（使用循环append([])）  深拷贝：a改变，b不变import copy b &#x3D; copy.deepcopy(a)  print不以科学计数法输出import numpy a">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-12T10:00:36.000Z">
+<meta property="article:modified_time" content="2021-05-12T02:04:44.574Z">
 <meta property="article:author" content="Evan Chen">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://www.logiclines.top/">
+<link rel="canonical" href="https://www.logiclines.top/2021/05/12/python-tips/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;www.logiclines.top&#x2F;2021&#x2F;05&#x2F;12&#x2F;python-tips&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;12&#x2F;python-tips&#x2F;&quot;,&quot;title&quot;:&quot;Python的一些小技巧及注意事项&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>cFrost</title><script src="/js/config.js"></script>
+<title>Python的一些小技巧及注意事项 | cFrost</title><script src="/js/config.js"></script>
   
 
 
@@ -103,7 +108,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -116,6 +121,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%8C%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="nav-number">1.</span> <span class="nav-text">深拷贝，浅拷贝</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%85%E6%8B%B7%E8%B4%9D%EF%BC%9Aa%E6%94%B9%E5%8F%98%EF%BC%8Cb%E4%B9%9F%E6%94%B9%E5%8F%98"><span class="nav-number">1.1.</span> <span class="nav-text">浅拷贝：a改变，b也改变</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%9Aa%E6%94%B9%E5%8F%98%EF%BC%8Cb%E4%B8%8D%E5%8F%98"><span class="nav-number">1.2.</span> <span class="nav-text">深拷贝：a改变，b不变</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print%E4%B8%8D%E4%BB%A5%E7%A7%91%E5%AD%A6%E8%AE%A1%E6%95%B0%E6%B3%95%E8%BE%93%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">print不以科学计数法输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%9A%E4%B8%BE%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">枚举函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#is"><span class="nav-number">4.</span> <span class="nav-text">&#x3D;&#x3D;, is</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-String-and-Array"><span class="nav-number">5.</span> <span class="nav-text">Python String and Array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-gt-Array"><span class="nav-number">5.1.</span> <span class="nav-text">String-&gt;Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-gt-String"><span class="nav-number">5.2.</span> <span class="nav-text">Array-&gt;String</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">统计元素个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%94%E9%99%A4%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0"><span class="nav-number">7.</span> <span class="nav-text">剔除重复元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E9%97%B4"><span class="nav-number">8.</span> <span class="nav-text">运行时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E7%94%B1%E5%AD%97%E6%AF%8D%E7%BB%84%E6%88%90"><span class="nav-number">9.</span> <span class="nav-text">检查字符串是否由字母组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#open-%E9%9D%9E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">10.</span> <span class="nav-text">open 非转义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print-%E9%9D%9E%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">11.</span> <span class="nav-text">print 非转义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#time"><span class="nav-number">12.</span> <span class="nav-text">time</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lambda%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-number">13.</span> <span class="nav-text">lambda匿名函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nametuple"><span class="nav-number">14.</span> <span class="nav-text">nametuple</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#attrdict"><span class="nav-number">15.</span> <span class="nav-text">attrdict</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tqdm"><span class="nav-number">16.</span> <span class="nav-text">tqdm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#assert"><span class="nav-number">17.</span> <span class="nav-text">assert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E5%8F%82%E6%95%B0kwargs"><span class="nav-number">18.</span> <span class="nav-text">多参数kwargs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A50"><span class="nav-number">19.</span> <span class="nav-text">补0</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,16 +185,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/12/python-tips/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -201,9 +208,9 @@
       <meta itemprop="name" content="cFrost">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/python-tips/" class="post-title-link" itemprop="url">Python的一些小技巧及注意事项</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Python的一些小技巧及注意事项
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -236,7 +243,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="深拷贝，浅拷贝"><a href="#深拷贝，浅拷贝" class="headerlink" title="深拷贝，浅拷贝"></a>深拷贝，浅拷贝</h2><ul>
+        <h2 id="深拷贝，浅拷贝"><a href="#深拷贝，浅拷贝" class="headerlink" title="深拷贝，浅拷贝"></a>深拷贝，浅拷贝</h2><ul>
 <li>直接赋值：传递对象的引用，原列表改变，被赋值的也改变</li>
 </ul>
 <h3 id="浅拷贝：a改变，b也改变"><a href="#浅拷贝：a改变，b也改变" class="headerlink" title="浅拷贝：a改变，b也改变"></a>浅拷贝：a改变，b也改变</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> copy
@@ -342,7 +349,6 @@ user <span class="token operator">=</span> user<span class="token punctuation">.
 <hr>
 <h2 id="补0"><a href="#补0" class="headerlink" title="补0"></a>补0</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">.</span>zfill<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-      
     </div>
 
     
@@ -350,550 +356,25 @@ user <span class="token operator">=</span> user<span class="token punctuation">.
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+          </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/08/sublime-python/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/blue.jpg">
-      <meta itemprop="name" content="Evan Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cFrost">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/08/sublime-python/" class="post-title-link" itemprop="url">Mac配置Sublime text3 python环境</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-08 10:43:11" itemprop="dateCreated datePublished" datetime="2021-05-08T10:43:11Z">2021-05-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-12 01:58:37" itemprop="dateModified" datetime="2021-05-12T01:58:37Z">2021-05-12</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h2><ul>
-<li>推荐[Anaconda]{<a target="_blank" rel="noopener" href="https://www.anaconda.com/distribution/%7D">https://www.anaconda.com/distribution/}</a></li>
-<li>或者可以选择pyenv，使用brew安装：<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ brew <span class="token function">install</span> pyenv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/08/sublime-python/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/08/LanModel/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/blue.jpg">
-      <meta itemprop="name" content="Evan Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cFrost">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/08/LanModel/" class="post-title-link" itemprop="url">语言模型</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-08 10:00:43" itemprop="dateCreated datePublished" datetime="2021-05-08T10:00:43Z">2021-05-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-11 10:04:36" itemprop="dateModified" datetime="2021-05-11T10:04:36Z">2021-05-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/NLP/" itemprop="url" rel="index"><span itemprop="name">NLP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="">English version is coming soon.</a></p>
-<h2 id="n-gram语言模型"><a href="#n-gram语言模型" class="headerlink" title="n-gram语言模型"></a>n-gram语言模型</h2><h3 id="语言模型"><a href="#语言模型" class="headerlink" title="语言模型"></a>语言模型</h3><ul>
-<li>通常，一个语言模型指的是一个字符串s的概率分布p(s)，这里的p(s)反映了字符串s出现的频率。<br><img src="https://i.loli.net/2021/05/11/6Sof2Rr8NBUyFaj.png" alt="语言模型.png"></li>
-<li>语言模型从训练语料中学习而来，用于预测某字符串的出现概率。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/08/LanModel/#more" rel="contents">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/08/sublime-python/" rel="prev" title="Mac配置Sublime text3 python环境">
+                  <i class="fa fa-chevron-left"></i> Mac配置Sublime text3 python环境
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/08/NLTK/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/blue.jpg">
-      <meta itemprop="name" content="Evan Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cFrost">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/08/NLTK/" class="post-title-link" itemprop="url">NLTK及nltk_data安装教程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-05-08 09:47:10 / Modified: 01:56:29" itemprop="dateCreated datePublished" datetime="2021-05-08T09:47:10Z">2021-05-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/NLP/" itemprop="url" rel="index"><span itemprop="name">NLP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a href="">English version is coming soon.</a></p>
-<ol>
-<li>安装nltk<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> nltk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/08/NLTK/#more" rel="contents">
-                Read more &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/08/han-sentence/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/blue.jpg">
-      <meta itemprop="name" content="Evan Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cFrost">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/08/han-sentence/" class="post-title-link" itemprop="url">汉语句型</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-08 09:31:32" itemprop="dateCreated datePublished" datetime="2021-05-08T09:31:32Z">2021-05-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-11 09:43:19" itemprop="dateModified" datetime="2021-05-11T09:43:19Z">2021-05-11</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/NLP/" itemprop="url" rel="index"><span itemprop="name">NLP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><em>If you want English version of this article, please mail me to let me know.</em></p>
-<h2 id="非句型因素"><a href="#非句型因素" class="headerlink" title="非句型因素"></a>非句型因素</h2><blockquote>
-<p>一切与句子的句法结构无关的因素都不应该影响句型划分。</p>
-</blockquote>
-<ol>
-<li><strong>修饰语不影响句子的结构</strong><br>这个好理解，不过注意状语也算是修饰语，不影响结构。</li>
-<li><strong>句子中的独立成分、提示成分、追加成分、连续反复的重复成分、冗余重复成分等也不影响句型划分</strong><br>这些部分也视为修饰语，例如“小王来了”和“听说小王来了”是同一句型。</li>
-<li><strong>句子成分的省略、易位不影响句型划分</strong><br>如省略句和完全句、倒装句和常式句。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/08/han-sentence/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/07/FastBert-zh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/blue.jpg">
-      <meta itemprop="name" content="Evan Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cFrost">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/07/FastBert-zh/" class="post-title-link" itemprop="url">FastBert论文解读</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-07 15:05:41" itemprop="dateCreated datePublished" datetime="2021-05-07T15:05:41Z">2021-05-07</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-10 05:51:46" itemprop="dateModified" datetime="2021-05-10T05:51:46Z">2021-05-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/NLP/" itemprop="url" rel="index"><span itemprop="name">NLP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert/">English Version</a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
-<li>自适应的推理时间</li>
-<li>在fine-tune阶段独特的自蒸馏（self-distillation）机制</li>
-<li>比BERT快1-12倍
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/07/FastBert-zh/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/07/FastBert/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/blue.jpg">
-      <meta itemprop="name" content="Evan Chen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="cFrost">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/07/FastBert/" class="post-title-link" itemprop="url">FastBert -- An improvement for BERT</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-05-06 18:34:13" itemprop="dateCreated datePublished" datetime="2021-05-06T18:34:13Z">2021-05-06</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-10 05:52:34" itemprop="dateModified" datetime="2021-05-10T05:52:34Z">2021-05-10</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/NLP/" itemprop="url" rel="index"><span itemprop="name">NLP</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://cfrost0.github.io/cFrost0/2021/05/07/FastBert-zh/">中文版</a></p>
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/1904.00962">Original paper</a></li>
-<li>adaptive inference time</li>
-<li>unique self-distillation mechanism at fine-tuning</li>
-<li>speed up by 1 to 12 times than BERT
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/07/FastBert/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
