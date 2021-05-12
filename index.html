@@ -214,7 +214,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-05-12 10:00:36 / Modified: 02:04:44" itemprop="dateCreated datePublished" datetime="2021-05-12T10:00:36Z">2021-05-12</time>
+      <time title="Created: 2021-05-12 10:00:36 / Modified: 02:07:10" itemprop="dateCreated datePublished" datetime="2021-05-12T10:00:36Z">2021-05-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -241,107 +241,14 @@
 </ul>
 <h3 id="浅拷贝：a改变，b也改变"><a href="#浅拷贝：a改变，b也改变" class="headerlink" title="浅拷贝：a改变，b也改变"></a>浅拷贝：a改变，b也改变</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> copy
 b <span class="token operator">=</span> copy<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ul>
-<li><code>[[WSDAD论文修改文档]] * num</code>内层的列表属于浅拷贝（使用循环<code>append([])</code>）</li>
-</ul>
-<h3 id="深拷贝：a改变，b不变"><a href="#深拷贝：a改变，b不变" class="headerlink" title="深拷贝：a改变，b不变"></a>深拷贝：a改变，b不变</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> copy
-b <span class="token operator">=</span> copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="print不以科学计数法输出"><a href="#print不以科学计数法输出" class="headerlink" title="print不以科学计数法输出"></a>print不以科学计数法输出</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-np<span class="token punctuation">.</span>set_printoptions<span class="token punctuation">(</span>suppress<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="枚举函数"><a href="#枚举函数" class="headerlink" title="枚举函数"></a>枚举函数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">42</span><span class="token punctuation">]</span>
-s <span class="token operator">=</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-<span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="is"><a href="#is" class="headerlink" title="==, is"></a>==, is</h2><ul>
-<li>is：比较两个实例对象是不是完全相同，他们::是不是同一个对象::，内存地址是否相同</li>
-<li>==：两个对象的内容是否相等，内存地址可以不一样，::内容一样即可::</li>
-</ul>
-<hr>
-<h2 id="Python-String-and-Array"><a href="#Python-String-and-Array" class="headerlink" title="Python String and Array"></a>Python String and Array</h2><h3 id="String-gt-Array"><a href="#String-gt-Array" class="headerlink" title="String-&gt;Array"></a>String-&gt;Array</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">l <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="Array-gt-String"><a href="#Array-gt-String" class="headerlink" title="Array-&gt;String"></a>Array-&gt;String</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">s <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<hr>
-<h2 id="统计元素个数"><a href="#统计元素个数" class="headerlink" title="统计元素个数"></a>统计元素个数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span><span class="token punctuation">.</span>count<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<hr>
-<h2 id="剔除重复元素"><a href="#剔除重复元素" class="headerlink" title="剔除重复元素"></a>剔除重复元素</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">np<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment"># 只能对一维或二维数组操作！</span>
-a <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span>a <span class="token keyword">for</span> b <span class="token keyword">in</span> c <span class="token keyword">for</span> a <span class="token keyword">in</span> b<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 三维数组</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="运行时间"><a href="#运行时间" class="headerlink" title="运行时间"></a>运行时间</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> time
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"using time:%ss"</span> <span class="token operator">%</span> time<span class="token punctuation">.</span>process_time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="检查字符串是否由字母组成"><a href="#检查字符串是否由字母组成" class="headerlink" title="检查字符串是否由字母组成"></a>检查字符串是否由字母组成</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span><span class="token punctuation">.</span>isalpha<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token comment"># 如果字符串至少有一个字符并且所有字符都是字母则返回 True，否则返回 False。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="open-非转义字符"><a href="#open-非转义字符" class="headerlink" title="open 非转义字符"></a>open 非转义字符</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r'file.txt'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encodeing<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
-<span class="token comment"># 文件名前加一个r，就不会识别\t了</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="print-非转义字符"><a href="#print-非转义字符" class="headerlink" title="print 非转义字符"></a>print 非转义字符</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">repr</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment"># 这样能将转义字符也print出来</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="time"><a href="#time" class="headerlink" title="time"></a>time</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> time
-
-<span class="token comment"># 返回数字</span>
-day <span class="token operator">=</span> time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>tm_mday
-<span class="token comment"># 格式化成字符串</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">"%Y-%m-%d %H:%M:%S"</span><span class="token punctuation">,</span> time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
-<span class="token comment"># 2020-08-27 14:34:33 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="lambda匿名函数"><a href="#lambda匿名函数" class="headerlink" title="lambda匿名函数"></a>lambda匿名函数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">add <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">,</span> y <span class="token punctuation">:</span> x<span class="token operator">+</span>y
-add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># 结果为3</span>
-<span class="token comment"># 不建议使用，对于简单函数应使用operator.mul等替代</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="nametuple"><a href="#nametuple" class="headerlink" title="nametuple"></a>nametuple</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> namedtuple
- 
-<span class="token comment"># 定义一个namedtuple类型User，并包含name，sex和age属性。</span>
-User <span class="token operator">=</span> namedtuple<span class="token punctuation">(</span><span class="token string">'User'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
- 
-<span class="token comment"># 创建一个User对象</span>
-user <span class="token operator">=</span> User<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'kongxx'</span><span class="token punctuation">,</span> sex<span class="token operator">=</span><span class="token string">'male'</span><span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">21</span><span class="token punctuation">)</span>
- 
-<span class="token comment"># 也可以通过一个list来创建一个User对象，这里注意需要使用"_make"方法</span>
-user <span class="token operator">=</span> User<span class="token punctuation">.</span>_make<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'kongxx'</span><span class="token punctuation">,</span> <span class="token string">'male'</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
- 
-<span class="token keyword">print</span> user
-<span class="token comment"># User(name='user1', sex='male', age=21)</span>
- 
-<span class="token comment"># 获取用户的属性</span>
-<span class="token keyword">print</span> user<span class="token punctuation">.</span>name
-<span class="token keyword">print</span> user<span class="token punctuation">.</span>sex
-<span class="token keyword">print</span> user<span class="token punctuation">.</span>age
- 
-<span class="token comment"># 修改对象属性，注意要使用"_replace"方法</span>
-user <span class="token operator">=</span> user<span class="token punctuation">.</span>_replace<span class="token punctuation">(</span>age<span class="token operator">=</span><span class="token number">22</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span> user
-<span class="token comment"># User(name='user1', sex='male', age=21)</span>
- 
-<span class="token comment"># 将User对象转换成字典，注意要使用"_asdict"</span>
-<span class="token keyword">print</span> user<span class="token punctuation">.</span>_asdict<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token comment"># OrderedDict([('name', 'kongxx'), ('sex', 'male'), ('age', 22)])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="attrdict"><a href="#attrdict" class="headerlink" title="attrdict"></a>attrdict</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">></span> <span class="token keyword">from</span> attrdict <span class="token keyword">import</span> AttrDict
-<span class="token operator">></span> a <span class="token operator">=</span> AttrDict<span class="token punctuation">(</span><span class="token punctuation">&#123;</span><span class="token string">'foo'</span><span class="token punctuation">:</span> <span class="token string">'bar'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
-<span class="token operator">></span> a<span class="token punctuation">.</span>foo
-<span class="token string">'bar'</span>
-<span class="token operator">></span> a<span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">]</span>
-<span class="token string">'bar'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="tqdm"><a href="#tqdm" class="headerlink" title="tqdm"></a>tqdm</h2><ul>
-<li>进度条模块<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> tqdm <span class="token keyword">import</span> tqdm
-<span class="token keyword">for</span> i <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
-</ul>
-<hr>
-<h2 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 在函数开始处检验传入参数的合法性</span>
-<span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>text<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"Input must be string!"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="多参数kwargs"><a href="#多参数kwargs" class="headerlink" title="多参数kwargs"></a>多参数kwargs</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fun</span><span class="token punctuation">(</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	i1 <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'i1'</span><span class="token punctuation">,</span> i1_default<span class="token punctuation">)</span>
-	i2 <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'i2'</span><span class="token punctuation">,</span> i2_default<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<hr>
-<h2 id="补0"><a href="#补0" class="headerlink" title="补0"></a>补0</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">.</span>zfill<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/12/python-tips/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
