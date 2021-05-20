@@ -131,16 +131,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -180,6 +180,109 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://www.logiclines.top/2021/05/21/install-mongodb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/blue.jpg">
+      <meta itemprop="name" content="Evan Chen">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cFrost">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/21/install-mongodb/" class="post-title-link" itemprop="url">Install MongoDB on MacOS</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-05-20 18:27:45 / Modified: 10:31:17" itemprop="dateCreated datePublished" datetime="2021-05-20T18:27:45Z">2021-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Database/" itemprop="url" rel="index"><span itemprop="name">Database</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>Follow the tutorial provided by official documents, link <a target="_blank" rel="noopener" href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">here</a> .  </p>
+</blockquote>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ol>
+<li>Make sure you have installed Xcode command-line tools, if not, run the following command:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">xcode-select --install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>Install Homebrew using this <a target="_blank" rel="noopener" href="https://brew.sh/#install">instruction</a></li>
+<li>Tap Homebrew to download the Homebrew formula of MongoDB:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew tap mongodb/brew<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>Instal a community version of MongoDB:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew <span class="token function">install</span> mongodb-community@4.4<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<hr>
+<h2 id="Run-MongoDB"><a href="#Run-MongoDB" class="headerlink" title="Run MongoDB"></a>Run MongoDB</h2><ol>
+<li>To start a MacOS service using brew, issue the following:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew services start mongodb-community@4.4<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>ps: The brew service will start as soon as MacOS launched.   </p>
+</blockquote>
+</li>
+<li>To stop this service:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew services stop mongodb-community@4.4<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>To run MongoDB as a background process, issue the following:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mongod --config /usr/local/etc/mongod.conf --fork<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<blockquote>
+<p>ps: This process won’t relaunch after you stop it or shut down your MacOS.   </p>
+</blockquote>
+</li>
+<li>To kill this process:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> aux <span class="token operator">|</span> <span class="token function">grep</span> -v <span class="token function">grep</span> <span class="token operator">|</span> <span class="token function">grep</span> mongod<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<hr>
+<h2 id="Connect-to-MongoDB"><a href="#Connect-to-MongoDB" class="headerlink" title="Connect to MongoDB"></a>Connect to MongoDB</h2><ol>
+<li>Type the following on a new terminal window:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mongo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li>To tun mongotop (a MongoDB tool), issue the following:<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">mongotop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
