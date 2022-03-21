@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nianr.github.io/nianr/categories/index.html</loc>
+    <loc>https://nianr.github.io/nianr/tags/index.html</loc>
     
     <lastmod>2022-03-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nianr.github.io/nianr/tags/index.html</loc>
+    <loc>https://nianr.github.io/nianr/categories/index.html</loc>
     
     <lastmod>2022-03-21</lastmod>
     
@@ -137,14 +137,14 @@
   </url>
   
   <url>
-    <loc>https://nianr.github.io/nianr/tags/Python/</loc>
+    <loc>https://nianr.github.io/nianr/tags/Database/</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nianr.github.io/nianr/tags/Database/</loc>
+    <loc>https://nianr.github.io/nianr/tags/Python/</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -167,14 +167,14 @@
   </url>
   
   <url>
-    <loc>https://nianr.github.io/nianr/categories/Python/</loc>
+    <loc>https://nianr.github.io/nianr/categories/Database/</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nianr.github.io/nianr/categories/Database/</loc>
+    <loc>https://nianr.github.io/nianr/categories/Python/</loc>
     <lastmod>2022-03-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
